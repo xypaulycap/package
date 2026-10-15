@@ -1,21 +1,68 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Script from "next/script";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { ClientLayout } from "@/components/client-layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
 export const metadata: Metadata = {
-  title: "MerVault Financial Group | Swiss Banking Solutions",
-  description: "MerVault Financial Group is a premier financial banking institution in Switzerland offering worldwide banking solutions.",
   metadataBase: new URL("https://mervaultfingroup.com"),
+
+  title: {
+    default: "MerVault Financial Group | Swiss Banking Solutions",
+    template: "%s | MerVault Financial Group",
+  },
+
+  icons: {
+  icon: "/logo.png",
+  shortcut: "/logo.png",
+  apple: "/logo.png",
+},
+
+  description:
+    "Discover MerVault Financial Group and its financial services. Explore our banking solutions and available services.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
   openGraph: {
-    title: "MerVault Financial Group",
-    description: "MerVault Financial Group is a premier financial banking institution in Switzerland offering worldwide banking solutions.",
-    url: "https://mervaultfingroup.com",
-    siteName: "MerVault Financial Group",
     type: "website",
+    url: "https://mervaultfingroup.com/",
+    siteName: "MerVault Financial Group",
+    title: "MerVault Financial Group | Swiss Banking Solutions",
+    description:
+      "Explore MerVault Financial Group's financial services and banking solutions.",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "MerVault Financial Group",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "MerVault Financial Group | Swiss Banking Solutions",
+    description:
+      "Explore MerVault Financial Group's financial services and banking solutions.",
+    images: ["/logo.png"],
   },
 };
 
@@ -23,11 +70,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏦</text></svg>" />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/aquawolf04/font-awesome-pro@5cd1511/css/all.css"
-        />
+        <link rel="stylesheet" />
+        
         <Script id="smartsupp-chat" strategy="afterInteractive">
           {`
             var _smartsupp = _smartsupp || {};
@@ -49,3 +93,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
+
+
