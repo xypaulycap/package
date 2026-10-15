@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/dashboard/', '/admin/', '/profile/', '/api/', '/kyc/'],
     },
-    sitemap: 'https://mervaultfingroup.com/sitemap.xml',
+    sitemap: 'https://www.mervaultfingroup.com/sitemap.xml',
   };
 }

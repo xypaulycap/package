@@ -50,12 +50,12 @@ export function Navigation({ children }: NavigationProps) {
     { href: "/profile", label: "Settings" },
   ];
 
-  if (!isMounted) {
-    return null;
-  }
-
   // Skip Navigation component for marketing pages - they use their own navbar
   if (isMarketingPage) {
+    return <>{children}</>;
+  }
+
+  if (!isMounted) {
     return <>{children}</>;
   }
 

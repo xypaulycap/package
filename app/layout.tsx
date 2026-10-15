@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mervaultfingroup.com"),
+  metadataBase: new URL("https://www.mervaultfingroup.com"),
 
   title: {
     default: "MerVault Financial Group | Swiss Banking Solutions",
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   },
 
   icons: {
-  icon: "/logo.png",
-  shortcut: "/logo.png",
-  apple: "/logo.png",
+  icon: "/favbank.png",
+  shortcut: "/favbank.png",
+  apple: "/favbank.png",
 },
 
   description:
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://mervaultfingroup.com/",
+    url: "https://www.mervaultfingroup.com/",
     siteName: "MerVault Financial Group",
     title: "MerVault Financial Group | Swiss Banking Solutions",
     description:
       "Explore MerVault Financial Group's financial services and banking solutions.",
     images: [
       {
-        url: "/logo.png",
+        url: "/favbank.png",
         width: 1200,
         height: 630,
         alt: "MerVault Financial Group",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "MerVault Financial Group | Swiss Banking Solutions",
     description:
       "Explore MerVault Financial Group's financial services and banking solutions.",
-    images: ["/logo.png"],
+    images: ["/favbank.png"],
   },
 };
 
@@ -70,7 +70,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="stylesheet" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/aquawolf04/font-awesome-pro@5cd1511/css/all.css"
+        />
         
         <Script id="smartsupp-chat" strategy="afterInteractive">
           {`
